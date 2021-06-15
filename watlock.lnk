@@ -1,0 +1,8 @@
+system   dos4g
+option   map=watlock
+option   stub=wstubq.exe
+option   stack=40000
+debug all
+name     watlock
+library  gnu32d
+file     watlock

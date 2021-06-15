@@ -1,0 +1,286 @@
+WATCOM Linker Version 11.0
+Copyright by Sybase, Inc., and its subsidiaries, 1985, 1997.
+Created on:       98/01/08 15:33:40
+Executable Image: watlock.exe
+creating a DOS/4G executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        0000a430
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           0001:00000000   00000010
+_TEXT                  CODE           AUTO           0001:00000010   00002370
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   00000068
+CONST2                 DATA           DGROUP         0002:0000006c   00000000
+_DATA                  DATA           DGROUP         0002:0000006c   00000315
+TIB                    DATA           DGROUP         0002:00000381   00000000
+TI                     DATA           DGROUP         0002:00000381   00000000
+TIE                    DATA           DGROUP         0002:00000381   00000000
+XIB                    DATA           DGROUP         0002:00000382   00000000
+XI                     DATA           DGROUP         0002:00000382   00000024
+XIE                    DATA           DGROUP         0002:000003a6   00000000
+YIB                    DATA           DGROUP         0002:000003a6   00000000
+YI                     DATA           DGROUP         0002:000003a6   00000006
+YIE                    DATA           DGROUP         0002:000003ac   00000000
+DATA                   DATA           DGROUP         0002:000003ac   00000000
+_BSS                   BSS            DGROUP         0002:000003b0   00000438
+STACK                  STACK          DGROUP         0002:000007f0   00009c40
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: watlock.obj(C:\prog\lock\watlock.c)
+0001:00000010  main_
+Module: c:\WC\lib386\dos\clib3r.lib(cstart)
+0001:00000003* ___begtext
+0002:00000000* __nullarea
+0002:0000006c* __GDAptr
+0002:00000070* __D16Infoseg
+0002:00000072  __x386_zero_base_selector
+0001:0000003c  _cstart_
+0001:000002cb  __exit_
+0001:000002cd  __do_exit_with_msg__
+0001:00000308  __GETDS
+0001:00000308  ___GETDSStart_
+0001:00000313  ___GETDSEnd_
+Module: c:\WC\lib386\dos\clib3r.lib(argcv)
+0002:000003b0  __argc
+0002:000003b4  __argv
+0002:000003b8  ___argc
+0002:000003bc  ___argv
+Module: c:\WC\lib386\dos\clib3r.lib(cmain386)
+0001:00000313  __CMain
+Module: c:\WC\lib386\dos\clib3r.lib(initrtns)
+0001:0000037c  __InitRtns
+0001:000003c8  __FiniRtns
+Module: c:\WC\lib386\dos\clib3r.lib(dosseg)
+0000:00001234  __DOSseg__
+Module: c:\WC\lib386\dos\clib3r.lib(crwdata)
+0002:00000084  __psp
+0002:000000af  __osmajor
+0002:000000b0  __osminor
+0002:000000a6  __Extender
+0002:000000a7  __ExtenderSubtype
+0002:000000a8  __X32VM
+0002:00000088* __x386_stacklow
+0002:0000007c  __LpCmdLine
+0002:00000080  __LpPgmName
+0002:00000074  __dynend
+0002:00000078  __curbrk
+0002:00000088  __STACKLOW
+0002:0000008c  __STACKTOP
+0002:00000090  __ASTACKSIZ
+0002:00000094  __ASTACKPTR
+0002:00000098* __cbyte
+0002:0000009c* __cbyte2
+0002:000000a0  __child
+0002:000000a9  __Envptr
+0002:000000ad  __Envseg
+0002:000000a4  __no87
+0002:000000b1  __FPE_handler
+0002:000000b1  ___FPE_handler
+Module: c:\WC\lib386\dos\clib3r.lib(initargv)
+0001:0000041b  __Init_Argv_
+Module: c:\WC\lib386\dos\clib3r.lib(stack386)
+0001:000005fa  stackavail_
+Module: c:\WC\lib386\dos\clib3r.lib(stk)
+0001:0000061f* __STK
+0001:0000060c* __CHK
+0001:0000061c  __GRO
+0001:0000063d* __STKOVERFLOW_
+Module: c:\WC\lib386\dos\clib3r.lib(cinit)
+0001:0000064c  __CommonInit_
+Module: c:\WC\lib386\dos\clib3r.lib(___argc)
+0002:000003c0  ____Argc
+0002:000003c4  ____Argv
+Module: c:\WC\lib386\dos\clib3r.lib(exit)
+0001:000006a7  __null_int23_exit_
+0001:000006a8  exit_
+0001:000006cb+ _exit_
+0002:000000cc  ___int23_exit
+0002:000000d0  ___FPE_handler_exit
+Module: c:\WC\lib386\dos\clib3r.lib(sgdef086)
+0002:00000382  __Start_XI
+0002:000003a6  __End_XI
+0002:000003a6  __Start_YI
+0002:000003ac  __End_YI
+Module: c:\WC\lib386\dos\clib3r.lib(nmalloc)
+0001:000006e2* _nmalloc_
+0001:000006e2  malloc_
+0002:000000d4  ___nheapbeg
+0002:000000d8  ___MiniHeapRover
+0002:000000dc  ___LargestSizeB4MiniHeapRover
+Module: c:\WC\lib386\dos\clib3r.lib(histsplt)
+0002:000003c8  ___historical_splitparms
+Module: c:\WC\lib386\dos\clib3r.lib(xmsg)
+0001:000007c3* __exit_with_msg_
+0001:000007c8  __fatal_runtime_error_
+Module: c:\WC\lib386\dos\clib3r.lib(amblksiz)
+0002:000000e0  __amblksiz
+Module: c:\WC\lib386\dos\clib3r.lib(sigsy)
+0001:000008f2  __DPMI_hosted_
+0001:0000097d  __restore_int23_
+0001:00000b72  __restore_int_ctrl_break_
+0001:00000b93  __grab_int23_
+0001:00000cdb  __grab_int_ctrl_break_
+Module: c:\WC\lib386\dos\clib3r.lib(mem)
+0001:00000e50  __MemAllocator
+0001:00000f00  __MemFree
+Module: c:\WC\lib386\dos\clib3r.lib(grownear)
+0001:0000109b+ __FreeDPMIBlocks_
+0001:000010f7* __ReAllocDPMIBlock_
+0001:00001262+ __LastFree_
+0001:0000142f  __ExpandDGROUP_
+Module: c:\WC\lib386\dos\clib3r.lib(nmemneed)
+0001:000015f0  __nmemneed_
+Module: c:\WC\lib386\dos\clib3r.lib(heapmod)
+0002:000007d0  ___nheap_clean
+0002:000007d1* ___fheap_clean
+Module: c:\WC\lib386\dos\clib3r.lib(enterdb)
+0001:000015f3  __EnterWVIDEO_
+0002:00000100+ ___WD_Present
+Module: c:\WC\lib386\dos\clib3r.lib(signl)
+0001:00001619+ __sigabort_
+0001:00001623  __sigfpe_handler_
+0001:0000165a* signal_
+0001:00001735  raise_
+Module: c:\WC\lib386\dos\clib3r.lib(chainint)
+0001:000017e8  _chain_intr_
+Module: c:\WC\lib386\dos\clib3r.lib(d_setvec)
+0001:00001801  _dos_setvect_
+Module: c:\WC\lib386\dos\clib3r.lib(nonibm)
+0001:0000182c+ __is_nonIBM_
+0002:00000138  ___NonIBM
+Module: c:\WC\lib386\dos\clib3r.lib(d_getvec)
+0001:00001884  _dos_getvect_
+Module: c:\WC\lib386\dos\clib3r.lib(nfree)
+0001:000018b4  _nfree_
+0001:000018b4* free_
+0002:000007d4  ___MiniHeapFreeRover
+Module: c:\WC\lib386\dos\clib3r.lib(minreal)
+0002:000007d8  ___minreal
+Module: c:\WC\lib386\dos\clib3r.lib(heapen)
+0001:000019af* _heapenable_
+0002:0000013c  ___heap_enabled
+Module: c:\WC\lib386\dos\clib3r.lib(sbrk386)
+0001:000019bf* sbrk_
+0001:00001a7f  __brk_
+Module: c:\WC\lib386\dos\clib3r.lib(seterrno)
+0001:00001b44  __set_errno_
+0001:00001b50* __set_EDOM_
+0001:00001b57* __set_ERANGE_
+0001:00001b5e* __set_EINVAL_
+0001:00001b6e* __set_doserrno_
+Module: c:\WC\lib386\dos\clib3r.lib(abort)
+0001:00001b7a* abort_
+0001:00001b80  __terminate_
+0002:00000140  ___abort
+Module: c:\WC\lib386\dos\clib3r.lib(cntrl87)
+0001:00001b92  _control87_
+Module: c:\WC\lib386\math387r.lib(grabfpe)
+0001:00001bde  __grab_fpe_
+Module: c:\WC\lib386\dos\clib3r.lib(inirmsel)
+0002:000007dc  __ExtenderRealModeSelector
+Module: c:\WC\lib386\dos\clib3r.lib(errno)
+0001:00001cea  __get_errno_ptr_
+0001:00001cf0  __get_doserrno_ptr_
+0002:000007e0+ _errno
+0002:000007e4+ __doserrno
+Module: c:\WC\lib386\dos\clib3r.lib(01h)
+0002:00000144  __8087
+0002:00000145  __real87
+Module: c:\WC\lib386\dos\clib3r.lib(grabfp87)
+0001:00001cf6  __GrabFP87_
+Module: c:\WC\lib386\dos\clib3r.lib(chk8087)
+0001:00001d7b+ __init_8087_
+0001:00001dac* _fpreset_
+0001:00001db6  __chk8087_
+Module: c:\WC\lib386\dos\clib3r.lib(fpe387)
+0002:00000148  ___PMSeg
+0002:0000014a  ___PMAddr
+0002:0000014e  ___RMAddr
+0001:00001dfa  __Init_FPE_handler_
+0001:00001e57  __Fini_FPE_handler_
+Module: c:\WC\lib386\dos\clib3r.lib(fpeinth)
+0001:00001eb4  __Enable_FPE_
+0001:00001ec9  __FPEHandler_
+0001:00001ec9  ___FPEHandlerStart_
+0001:00001ed6  __FPE2Handler_
+0001:00001fd9  ___FPEHandlerEnd_
+Module: c:\WC\lib386\dos\clib3r.lib(save8087)
+0002:00000370  ___Save8087
+0002:00000374  ___Rest8087
+Module: c:\WC\lib386\dos\clib3r.lib(8087cw)
+0002:00000378  __8087cw
+Module: c:\WC\lib386\dos\clib3r.lib(init8087)
+0001:00002112  __init_80x87
+Module: c:\WC\lib386\dos\clib3r.lib(fpephar)
+0001:0000213a  __Phar_hook_init_
+0001:000021fd  __Phar_hook_fini_
+Module: c:\WC\lib386\dos\clib3r.lib(fpedos4g)
+0001:0000222a  __DOS4G_hook_init_
+0001:00002257  __DOS4G_hook_fini_
+Module: c:\WC\lib386\dos\clib3r.lib(fpeergo)
+0001:00002270  __Ergo_hook_init_
+0001:000022ae  __Ergo_hook_fini_
+Module: c:\WC\lib386\dos\clib3r.lib(fpeintel)
+0001:000022c8  __Intel_hook_init_
+0001:00002320  __Intel_hook_fini_
+Module: c:\WC\lib386\dos\clib3r.lib(fpeint)
+0002:0000037c  ___FPE_int
+0002:0000037d  ___IRQ_num
+0002:0000037e  ___IRQ_int
+0002:0000037f  ___MST_pic
+0002:00000380+ ___SLV_pic
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+c:\WC\lib386\dos\clib3r.lib
+c:\WC\lib386\math387r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  9c40 (40000.)
+Memory size:  c7b0 (51120.)
+Entry point address: 0001:0000003c
+Link time: 00:00.58
